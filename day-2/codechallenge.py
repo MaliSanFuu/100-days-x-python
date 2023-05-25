@@ -9,14 +9,21 @@ def challenge1():
 
 #challenge2
 def bmi_calculator():
-    height = float(input("Enter your height in m: \n"))
-    weight = int(input("Enter your weight: \n"))
+    weight = int(input("Input your weight in kg (e.g. 80): \n"))
+    height = float(input("Input your height in m (e.g. 1.79): \n"))
 
-    bmi = weight / height**2
+    bmi = round(weight / (height**2))
 
-    bmi_as_int = int(bmi)
-
-    print(f"Your bmi is {bmi_as_int}")
+    if bmi < 18.5:
+        print(f"Your BMI is {bmi} and that mean's you are underweight")
+    elif bmi < 25:
+        print(f"Your BMI is {bmi} and that mean's you are normal weight")
+    elif bmi < 30:
+        print(f"Your BMI is {bmi} and that mean's you are overweight")
+    elif bmi < 35:
+        print(f"Your BMI is {bmi} and that mean's you are obese")
+    else:
+        print(f"Your BMI is {bmi} and that mean's you are clincally obese")
 
 #challenge3
 def life_in_weeks():
