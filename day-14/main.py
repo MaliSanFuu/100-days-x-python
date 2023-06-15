@@ -54,11 +54,13 @@ def game():
 
         if user_input == "a":
             game_flag = compare_follower_count(first,second)
+            
         else:
             game_flag = compare_follower_count(second,first)
+            first = second  
 
-        first = second
     
     print(f'Your final score is: {score}')
 
 game()
+
